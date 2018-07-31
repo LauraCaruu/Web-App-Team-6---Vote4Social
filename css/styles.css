@@ -1,0 +1,759 @@
+/* ========  GLOBAL  (ESTRUCTURA DE APP)  ========= */
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{  /*  Viene siendo el "Container"  */
+ width:100%;
+ margin:auto;
+ max-width:925px;
+ min-height:670px;
+ position:relative;
+ background:#FFCCE5;
+
+/*	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19); */
+}
+
+
+.login-html{  /*  Viene siendo el "Row"  */
+ width:100%;
+ height:100%;
+ position:absolute;
+ padding:90px 70px 50px 70px;
+ /*background:rgba(40,57,101,.9); */
+ background: white;
+}
+/*  FIN Estructura de APP   */
+h1{
+  color:#3a3b3f;
+ text-transform: uppercase;
+ text-align: center;
+}
+
+h2{
+  color:#3a3b3f;
+ text-transform: uppercase;
+ text-align: center;
+ font-size: 1em;
+}
+/* ======   Contenido   =====  */
+
+/*   Imagen Logo    */
+
+
+/*  NAVEGACIÓN   */
+
+
+nav
+{
+  overflow: hidden;
+  /*height:50px;    */
+}
+
+.menuNav
+{
+  /*padding:10px; */
+  box-sizing:border-box;
+
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+
+  justify-content: space-between;
+}
+
+/*  Menu y Cierre de menu   */
+
+input {
+  display: none;
+}
+
+#menuArea{  /* Posicionarlo pegado al borde superior   */
+ top:0;
+ float:right;
+ padding-top: 50px;
+}
+
+.open {
+  /*background-color: #3c3c3c;*/
+ background: #107eb2;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+
+.open:before {
+  content: "";
+  background-color: #107eb2;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+
+}
+
+.open:after {
+  content: "";
+  background-color: #107eb2;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  width: 24px;
+  height: 20px;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+}
+
+#menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+/*#menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}*/
+
+#menuToggle:checked ~ .menuOpen .open {
+  background-color: white;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: #107eb2;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: #107eb2;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* #menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
+}   */
+
+#myFile{
+ background: red;
+ width:200px;
+}
+
+/*  Label e inputs  */
+
+.login-form .group .label,
+.login-form .group .button{
+ text-transform:uppercase;
+}
+.login-form{
+ min-height:345px;
+ position:relative;
+ perspective:1000px;
+ transform-style:preserve-3d;
+ margin-top: 40px;
+}
+
+.login-form .group{
+ margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+ width:100%;
+ color:#fff;   /* Texto de los botones  */
+ display:block;
+}
+
+
+.login-form .group .input,
+.login-form .group .button{
+ border:none;
+ padding:15px 20px;
+ border-radius:25px;
+ background:#c3c9c8;
+
+}
+
+.login-form .group input[data-type="password"]{
+ text-security:circle;
+ -webkit-text-security:circle;
+}
+.login-form .group .label{
+ color:#3a3b3f;   /*  TEXTO USUARIO Y cONTRASEÑA  */
+ font-size:12px;
+}
+.login-form .group .button{
+ background:#107eb2;
+
+}
+
+.button{
+  text-align: center;
+}
+
+/* Mantenerme Logueado  */
+.login-form .group label .icon{
+ width:15px;
+ height:15px;
+ border-radius:2px;
+ position:relative;
+ display:inline-block;
+ background:#107eb2;
+
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+ content:'';
+ width:10px;
+ height:2px;
+ background:#fff; /* El visto cuando está seleccionado */
+ position:absolute;
+ transition:all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before{
+ left:3px;
+ width:5px;
+ bottom:6px;
+ transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+ top:6px;
+ right:0;
+ transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+ color:#107eb2;  /*  Texto cuando está seleccionado "Mantenerme conectado" */
+}
+
+.login-form .group .check:checked + label .icon{
+ background:#107eb2;
+}
+.login-form .group .check:checked + label .icon:before{
+ transform:scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked + label .icon:after{
+ transform:scale(1) rotate(-45deg);
+}
+
+/* Línea separadora  */
+.hr{
+ height:2px;
+ margin:60px 0 50px 0;
+ background:#c3c9c8;
+}
+/*  Texto Olvidaste Password? */
+.foot-lnk{
+ text-align:center;
+ margin-bottom: 30px;
+}
+
+/*  div en Inicio de "Agregar Usuario"  */
+.addUserButton, .addUser {
+  width: 100%;
+  display:inline-flex;
+  padding: 15px;
+}
+
+/* ======  MENU    ====== */
+
+input {
+  display: none;
+}
+
+.open {  /*  Menú Hamburguesa  */
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+
+}
+
+.open:before {
+  content: "";
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after {
+  content: "";
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  width: 24px;
+  height: 20px;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*background: rgba(255, 135, 2, 0.9);  Naranja */
+   background:#107eb2; /*  Azul Corporativo  */
+  z-index: 1000;    /* PRUEBA  */
+
+
+}
+
+.menu label {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent {
+  position: relative;
+  top: 50%;
+  font-size: 54px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -170px;
+
+/*  z-index: 1000;    PRUEBA  */
+
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a {   /*  letras Enlaces   */
+  display: block;
+ /* color: #107eb2;    Color original*/
+ color:white;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: Trebuchet MS;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.menu ul li a:hover {
+ /*   color: #ff8702;  Color original */
+  color:#c3c9c8;
+}
+
+.menu ul li:hover {
+ background: white;
+}
+
+.menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+
+
+}
+
+#menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+
+}
+
+#menuToggle:checked ~ .menuOpen .open {  /*  Menú Hamburguesa Abierto(que se vea la "x" de cerrar, a través del z.index)  */
+  background-color: transparent;
+    z-index: 1000000;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color:white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
+}
+   /*   FIN MENU ABIERTO      */
+
+
+
+/*   Encuesta Página de Inicio    */
+
+.descriptionBox{
+ border: 1px solid #107eb2;
+ border-radius: 25px;
+ padding: 10px;
+}
+/*  FIN "Encuesta página de Inicio"  */
+
+
+/*  INICIO Quiz    */
+.texto{
+  color:black;
+  text-align: center;
+  margin-top: 15px;
+}
+.quiz-container {
+ /*width: 450px;*/
+ color: white;
+ font-size: 110%;
+ margin-top: 40px;
+}
+/*.quiz-container h1 {  NO SE ESTÁ USANDO NINGUN H1
+ text-align: center;
+ color: #cb2127;
+ margin-bottom: 10px;
+}*/
+
+.quiz-container .box {
+ padding: 10px 15px;
+}
+.quiz-container .question {
+/* background-color: #cb2127;   ROJO*/
+ background-color: #107eb2;
+ margin-bottom: 25px;
+ font-size: 115%;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ position: relative;
+}
+.quiz-container .question:after {  /*  Pequeña pestaña que sobresale del cajón de la pregunta  */
+ content: "";
+ position: absolute;
+ bottom: -15px;
+ left: 35px;
+ width: 0;
+ height: 0;
+ border-left: 15px solid transparent;
+ border-right: 15px solid transparent;
+ border-top: 15px solid #107eb2;
+}
+.quiz-container .question span {   /*  El número de la pregunta que está dentro de un "recuadro" y estos son sus estilos   */
+ background-color: #107eb2;
+ color: white;
+ display: block;
+ float: left;
+ margin-left: -15px;
+ margin-top: -10px;
+ margin-right: 0px;
+ padding: 10px 10px;
+ text-align: center;
+ text-transform: uppercase;
+ width: 40px;
+}
+.quiz-container .answers {
+ padding-left: 0;
+ list-style-type: none;
+}
+.quiz-container .answers .answer {
+ background-color: #fff;
+ color: #107eb2;
+ margin-bottom: 10px;
+ position: relative;
+}
+.quiz-container .answers .answer:hover, .quiz-container .answers .answer.active {  /* Cambio de color de las preguntas al pasar el raton por encima de la opción    */
+ cursor: pointer;
+/* color: #2ecc71; color original verde grama*/
+ color:black;
+}
+.quiz-container .answers .answer:hover span:not([class^="checkmark"]), .quiz-container .answers .answer.active span:not([class^="checkmark"]) {
+ /*background-color: #2ecc71;*/
+ background-color: black;
+}
+.quiz-container .answers .answer.active span.checkmark {  /*  Checkmark  */
+ background-color: #fff;
+ position: absolute;
+ top: 8px;
+ right: 20px;
+ font-size: 120%;
+}
+.quiz-container .answers .answer span:not([class^="checkmark"]) { /* Recuadro opciones  */
+ background-color:#107eb2;
+ color: white;
+ display: block;
+ float: left;
+ margin-left: -15px;
+ margin-top: - 10px;
+ margin-right: 20px;
+ padding: 10px 0;
+ text-align: center;
+ text-transform: uppercase;
+ width: 40px;
+
+}
+.quiz-container button {
+ /*background-color: #cb2127;  color original: verde grama*/
+ background-color: #107eb2;
+ color: #fff;
+ font-size: 110%;
+ border: 0;
+ width: 100%;
+ position: relative;
+}
+.quiz-container button:hover {
+ /*  background-color: #2ecc71;*/
+background-color: BLACK;
+ cursor: pointer;
+}
+/*.quiz-container button span {    Span de flecha original
+ font-size: 200%;
+ position: absolute;
+ top: -3px;
+ right: 10px;
+
+} */
+
+@media (max-width: 450px) {
+ .quiz-container {
+   width: calc(100% - 30px);
+ }
+}
+
+/*  FIN Quiz    */
+
+
+
+
+/*  =============   ESTILOS PÁGINAS CRISTINA  ======0  */
+
+
+/* top nav */
+
+div#menuArea {
+    MARGIN-RIGHT: 30PX;
+}
+.topnav {
+	/* background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%); */
+ width: 100%;
+	margin-top: 75px;
+	display:flex;
+  justify-content: flex-end;
+
+}
+
+.topnav-left {
+	display: flex;
+	justify-content: flex-start;
+	align-items:center;
+	width:50%;
+	margin-left:21px;
+
+}
+
+#logoBcn{
+  width:250px;
+}
+
+
+
+.topnav-left p {
+	color: black
+	text-align: center;
+	text-decoration: none;
+	font-weight: 100;
+
+}
+
+/* bar right */
+
+.topnav-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items:center;
+	width:50%;
+}
+
+.topnav-right p {
+color:black
+	text-align: center;
+	padding: 14px 14px;
+	text-decoration: none;
+	font-weight: 100;
+}
+
+/* on hover */
+
+.topnav-right a:hover {
+	background-color:#107eb2;
+	color: black;
+}
+/* INICIO GRID EVENTS */
+
+
+i.fas.fa-plus-circle {
+	margin-top: 265px;
+	margin-left: 100px;
+	color: #107eb2;
+}
+
+
+
+.main-grid {
+	box-sizing: border-box;
+	padding: 2em;
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2em;
+
+}
+
+.card{
+	background: #fff;
+	box-shadow: 0 2px 16px rgba(0,0,0,.2);
+}
+
+.card__image{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card__content{
+	padding: 1em 1em 0;
+}
+.card__content h3{
+	font-size:14px!important;
+}
+
+.card__content p {
+	font-size:1vw;
+	margin-top: 9px;
+}
+
+.card__title{
+	margin: 0;
+	font-size:18px!important;
+	color: #107eb2;
+	padding-bottom: 9px;
+
+}
+.card .login-form {
+	min-height: 0px;
+}
+
+/* .login-form .group .button {
+	background: none;
+	border: 1px solid #107eb2;
+	color: #107eb2;
+	font-size: 12px; */
+
+
+@media screen and (max-width: 900px){
+	.grid{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.grid{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.grid{
+		grid-template-columns: 1fr;
+	}
+}
+
+/*  FIN ESTILOS CRISTINA   */

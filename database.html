@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data base Users</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Duda de si es necesario pero lo coloco igual   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Hasta aquí el link de duda  -->
+
+  </head>
+</head>
+
+<body>
+
+  <div class="login-wrap">
+    <div class="login-html">
+
+      <!--  NAVEGACIÓN    -->
+      <!--  Imagen Logo   -->
+      <nav class="group menuNav">
+
+        <a title="Vote 4 Social" href="./login.html"><img id="logo" class="img-fluid" src="images/Logo-de-vote-4-social-grande.png" alt="Vote 4 Social"></a>
+
+        <!--  MENU   -->
+        <div id="menuArea">
+
+          <input type="checkbox" id="menuToggle">
+
+          <label for="menuToggle" class="menuOpen">
+                    <div class="open">
+                    </div>
+                        </label>
+
+          <div class="menu menuEffects">
+            <label for="menuToggle"></label>
+            <div class="menuContent">
+              <ul>
+                <li><a href="./events.html">Eventos</a></li>
+                <li><a href="./perfilEnt.html">Perfil</a></li>
+                <li><a href="./login.html">Desconectarse</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </nav>
+
+
+      <!--top nav-->
+      <div class="topnav">
+        <div class="topnav-left">
+          <a title="Bcn Activa" href="http://www.barcelonactiva.cat/barcelonactiva/cat/"><img id="logoBcn" class="img-fluid" src="images/bcnactiva.png" alt="Bcn Activa"></a>
+          <!--<p>Entitat A</p>  -->
+        </div>
+
+        <div class="topnav-right">
+          <p>Hola, Usuario ¡Bienvenido de nuevo!</p>
+
+          <!--  Search Bar   -->
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+       <button class="btn btn-default" type="button">Go!</button>
+     </span>
+            </div>
+            <!-- /input-group -->
+          </div>
+          <!-- /.col-lg-6 -->
+        </div>
+        <!-- Fin "Top Nav Right"   -->
+      </div>
+      <!--end top bar-->
+
+      <!--
+       Inicio BD USERS. Es real. Family Guy es lo mejor -->
+      <!-- <table class="table table-bordered table-hover">  -->
+<table class="login-wrap table table-bordered table-hover">
+  <table class="table table-bordered table-hover">
+       <thead>
+                         <tr>
+                           <th>Participa</th>
+                           <th>Nombre</th>
+                           <th>Apellidos</th>
+                           <th>Email</th>
+                           <th>Teléfono</th>
+                           <th>Password</th>
+                           <th>Votos</th>
+                           <td>Edit</td>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td>False</td>
+                           <td>Peter</td>
+                           <td>Griffin</td>
+                           <td>griffin@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>DrunkenClam</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Stewie</td>
+                           <td>Griffin</td>
+                           <td>im_hitler@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>ilovelois</td>
+                           <td>6</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Lois</td>
+                           <td>Griffin</td>
+                           <td>gingerlady@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>ihatemydad</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Brian</td>
+                           <td>Griffin</td>
+                           <td>woofwoof@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>iloveloistoo</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>False</td>
+                           <td>Chris</td>
+                           <td>Griffin</td>
+                           <td>absurd@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>123</td>
+                           <td>6</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>False</td>
+                           <td>Meg</td>
+                           <td>Griffin</td>
+                           <td>suicidal@gmail.com</td>
+                           <td>+34 656 666 666</td>
+                           <td>imgay</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Glenn</td>
+                           <td>Quagmire</td>
+                           <td>sexytoy@gmail.com</td>
+                           <td>+34 655 677 222</td>
+                           <td>imsexyandiknowit</td>
+                           <td>6</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Joe</td>
+                           <td>Swanson</td>
+                           <td>ibelieveicanfly@gmail.com</td>
+                           <td>+34 655 677 222</td>
+                           <td>hotweels</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                         <tr>
+                           <td>True</td>
+                           <td>Cleveland</td>
+                           <td>Brown</td>
+                           <td>iwantmyshowback@gmail.com</td>
+                           <td>+34 655 677 222</td>
+                           <td>imatvstar</td>
+                           <td>1</td>
+                           <td>edit / delete</td>
+                         </tr>
+                       </tbody>
+
+                     </table>
+</table>
+
+    </div>
+  </div>
+
+
+
+  <!--  SCRIPTS Requeridos para Bootstrap   -->
+  <!-- JQUERY Script CDN Version -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <!-- Poppers Script CDN Version -->
+  <script src="https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <!-- Bootstrap Script CDN Version -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
