@@ -3,6 +3,10 @@ Ramon Prat, Iuliana Vladisavlevici, Romina Rua, Cristina Fernández, Laura Carul
 
 Front-End para app creada durante las jornadas de Hackaton del 30/31 de Julio 2018 para IT Academy Developer (Barcelona Activa). Desarrollo colaborativo de aplicación para m4social (www.m4social.org) con el objetivo de crear una plataforma de votación para asambleas generales de entidades del tercer sector.
 
+Back-End creada con Java Restfull API framework Spring and JPA.
+
+https://github.com/Iuliana19/v4socialBE
+
 WebApp responsive realizada con bootstrap, flexbox y grids.
 
 Pantallas
